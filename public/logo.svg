@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+    <rect width="600" height="220" fill="transparent"/>
+    <g transform="translate(0, 15)" fill="none" stroke="#6eaed6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M55,105 Q55,75 80,75 L210,75 Q235,75 235,105"/>
+        <path d="M45,105 Q45,120 60,120 L230,120 Q245,120 245,105 L235"/>
+        <path d="M45,105 Q40,105 40,115 L40,130 Q40,135 50,135 L65,135 L65,120"/>
+        <path d="M245,105 Q250,105 250,115 L250,130 Q250,135 240,135 L225,135 L225,120"/>
+        <line x1="50" y1="135" x2="240" y2="135"/>
+        <path d="M65,135 L60,160"/>
+        <path d="M95,135 L90,160"/>
+        <path d="M195,135 L200,160"/>
+        <path d="M225,135 L230,160"/>
+    </g>
+    <text
+            x="255" y="105"
+            font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+            font-weight="900"
+            font-size="58"
+            letter-spacing="2"
+            fill="#e8f4fd">ORDERING</text>
+    <text
+            x="300" y="160"
+            font-family="'Arial', 'Helvetica Neue', sans-serif"
+            font-weight="400"
+            font-size="44"
+            letter-spacing="3"
+            fill="#a0b8c8">FURNITURE</text>
+</svg>
