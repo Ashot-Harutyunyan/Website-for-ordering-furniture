@@ -8,6 +8,7 @@ import Home from './components/Home/Home.jsx'
 import Catalog from './components/Catalog/Catalog.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
+import SingleProduct from './components/SingleProduct/SingleProduct.jsx'
 
 const router = createBrowserRouter([
     {
@@ -18,22 +19,12 @@ const router = createBrowserRouter([
             // {
                 // errorElement: <ErrorBoundary/>,
                 // children: [
-                    {
-                        index: true,
-                        element: <Home />,
-                    },
-                    {
-                        path: '/catalog',
-                        element: <Catalog />,
-                    },
-                    {
-                        path: '/about',
-                        element: <About />,
-                    },
-                    {
-                        path: '/contact',
-                        element: <Contact />,
-                    },
+                    { index: true,  element: <Home /> },
+                    { path: '/product/:id',  element: <SingleProduct /> },
+                    { path: '/catalog',  element: <Catalog /> },
+                    { path: '/catalog/:id',  element: <SingleProduct /> },
+                    { path: '/about',  element: <About /> },
+                    { path: '/contact',  element: <Contact /> },
                 // ]
             // }
         ]

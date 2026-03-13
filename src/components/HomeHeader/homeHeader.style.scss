@@ -1,6 +1,6 @@
-header {
+.home-header {
   position: relative;
-  background-image: url("/public/header-background-image.jpg");
+  background-image: url("/public/home-header-background-image.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@ header {
     z-index: 1;
   }
 }
-.header-title {
+.home-header-title {
   padding-top: 90px;
   display: flex;
   flex-direction: column;
@@ -38,12 +38,12 @@ header {
   }
 }
 @media (max-width: 830px) {
-  header {
+  .home-header {
     background-position-x: -30px;
   }
 }
 @media (max-width: 360px) {
-  header {
+  .home-header {
     background-position-x: -40px;
   }
 }

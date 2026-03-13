@@ -4,6 +4,8 @@ import { NavLink, Link } from 'react-router'
 import { LANGUAGES } from '../../constants.js'
 import { useTheme } from '../../ctx/ThemeContext.jsx'
 import { useLanguage } from '../../ctx/LanguageContext.jsx'
+import { BsMoonStarsFill } from "react-icons/bs"
+import { FaSun } from "react-icons/fa6";
 
 function Nav() {
 
@@ -57,8 +59,9 @@ function Nav() {
             <div className='parent-container-language'>
                 <div className={`container-theme-switch${theme === 'light' ? ' light' : ' dark'}`}
                     onClick={toggleTheme}>
-                    <img src={theme === 'light' ? '/sun.svg' : '/moon.svg'}
-                        alt={theme === 'light' ? 'Light theme' : 'Dark theme'}/>
+                    { theme === 'light'
+                        ? <FaSun className='icon-sun'/>
+                        : <BsMoonStarsFill/> }
                 </div>
                 <div ref={dropdownRef} className={`container-language${show ? ' show' : ''}`}
                     onClick={() => setShow(prev => !prev)}>

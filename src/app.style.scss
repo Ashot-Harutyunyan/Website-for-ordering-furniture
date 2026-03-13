@@ -11,6 +11,11 @@
   --subTitle-color: #9CA3AF;
   --title-color: #F3F3F3;
   --price-color: #C8A85E;
+  --background-home-container: #000000;
+  --background-home-icons: #C8A85E;
+  --bg-home-contact-icons: #9CA3AF;
+  --background-about-container: lab(12.9615% -1.76476 -6.95769);
+  --border-color-about-img: lab(71.2019% 8.24577 52.3464);
 }
 .light {
   --bg-color: #F0F8FFFF;
@@ -20,6 +25,11 @@
   --subTitle-color: #4B5563;
   --title-color: #2D3748;
   --price-color: #a36000;
+  --background-home-container: #E5E7EB;
+  --background-home-icons: #DAB785;
+  --bg-home-contact-icons: #E5E7EB;
+  --background-about-container: lab(56 -3.46 -12.86 / 0.3);
+  --border-color-about-img: lab(12.9615% -1.76476 -6.95769);
 }
 body {
   max-width: 3000px;

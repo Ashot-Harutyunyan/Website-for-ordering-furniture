@@ -1,0 +1,9 @@
+.home-slider {
+  width: clamp(300px, 40%, 500px);
+  cursor: pointer;
+}
+@media (max-width: 950px) {
+  .home-slider {
+    width: clamp(300px, 60%, 500px);
+  }
+}
