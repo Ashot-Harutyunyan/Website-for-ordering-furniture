@@ -37,10 +37,10 @@ export const language = {
         homePageContactTitle: 'Կապ մեզ հետ',
         homePageContactSubtitle: 'Մենք միշտ ուրախ ենք օգնել Ձեզ կահույքի ընտրության հարցում',
         homePageContactContainerIcons: [
-            { src: '/telephone-icon.svg',  alt: 'telephone icon',  oneSubtitle: 'Հեռախոս',  twoSubtitles: '+7 (495) 123-45-67'},
-            { src: '/facebook-icon.svg', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
-            { src: '/instagram-icon.svg', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
-            { src: '/location.svg', alt: 'location icon', oneSubtitle: 'Հասցե', twoSubtitles: 'Moscow, st. Approximate, 123'}
+            { src: 'FiPhone',  alt: 'telephone icon',  oneSubtitle: 'Հեռախոս',  twoSubtitles: '099-04-75-14'},
+            { src: 'RiFacebookBoxLine', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
+            { src: 'IoLogoInstagram', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
+            { src: 'LuMapPin', alt: 'location icon', oneSubtitle: 'Հասցե', twoSubtitles: 'քաղաք Էջմիածին, Արարատյան փողոց, 27'}
         ],
         aboutHeaderTitle: 'Հարմարավետություն, որը ստեղծվել է հատուկ Ձեզ համար',
         aboutHeaderSubTitle: 'ՄԵՐ ՄԱՍԻՆ',
@@ -70,6 +70,12 @@ export const language = {
         aboutSectionInfoListSubTitle: 'Ինչու՞ ընտրել մեզ',
         aboutSectionInfoListTitle: 'Վստահության վրա կառուցված գործընկերություն',
         aboutSectionInfoListText: 'Մեզ ընտրելով՝ դուք գնում եք ոչ միայն կահույք. դուք ներդրում եք կատարում այնպիսի իրերի մեջ, որոնք կդառնան ձեր ընտանիքի պատմության մի մասը: Մեր նվիրվածությունը գերազանցությանը ակնհայտ է առաջին խորհրդակցությունից և շարունակվում է տարիներ շարունակ առաքումից հետո:',
+        contactHeaderTitle: 'Կապ մեզ հետ',
+        contactHeaderSubTitle: 'Մենք միշտ պատրաստ ենք օգնել ձեզ կահույքի ընտրության, հին կահույքի վերանորոգման հարցում և սիրով կպատասխանենք ձեր բոլոր հարցերին',
+        contactPageIframeTitle: 'Ինչպես գտնել մեզ',
+        contactInfoTitle: 'Պատրա՞ստ եք քննարկել ձեր նախագիծը?',
+        contactInfoText: 'Մենք պատրաստ ենք կյանքի կոչել ձեր գաղափարները՝ օգտագործելով բարձրորակ նյութեր և վարպետություն, ինչպես նաև առաջարկում ենք կահույքի մասնագիտական վերանորոգում',
+        contactPageButtonText: 'Կապ մեզ հետ',
 
     },
     RUS: {
@@ -110,10 +116,10 @@ export const language = {
         homePageContactTitle: 'Свяжитесь с нами',
         homePageContactSubtitle: 'Мы всегда рады помочь с выбором мебели',
         homePageContactContainerIcons: [
-            { src: '/telephone-icon.svg',  alt: 'telephone icon',  oneSubtitle: 'Телефон',  twoSubtitles: '+7 (495) 123-45-67'},
-            { src: '/facebook-icon.svg', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
-            { src: '/instagram-icon.svg', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
-            { src: '/location.svg', alt: 'location icon', oneSubtitle: 'Адрес', twoSubtitles: 'Moscow, st. Approximate, 123'}
+            { src: 'FiPhone',  alt: 'telephone icon',  oneSubtitle: 'Телефон',  twoSubtitles: '099-04-75-14'},
+            { src: 'RiFacebookBoxLine', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
+            { src: 'IoLogoInstagram', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
+            { src: 'LuMapPin', alt: 'location icon', oneSubtitle: 'Адрес', twoSubtitles: 'город Эчмиадзин, улица Араратян, 27'}
         ],
         aboutHeaderTitle: 'Комфорт, созданный специально для вас',
         aboutHeaderSubTitle: 'О НАС',
@@ -143,6 +149,12 @@ export const language = {
         aboutSectionInfoListSubTitle: 'Почему выбирают нас',
         aboutSectionInfoListTitle: 'Партнерство, построенное на доверии',
         aboutSectionInfoListText: 'Выбирая нас, вы покупаете не просто мебель — вы инвестируете в предметы, которые станут частью истории вашей семьи. Наша приверженность к совершенству проявляется с момента первой консультации и на протяжении многих лет после доставки.',
+        contactHeaderTitle: 'Свяжитесь с нами',
+        contactHeaderSubTitle: 'Мы всегда готовы помочь вам с выбором мебели, ремонтом старой мебели и с радостью ответим на все ваши вопросы',
+        contactPageIframeTitle: 'Как нас найти',
+        contactInfoTitle: 'Готовы обсудить ваш проект?',
+        contactInfoText: 'Мы готовы помочь воплотить ваши идеи в реальность, используя премиальные материалы и мастерство, а также предлагаем профессиональный ремонт старой мебели',
+        contactPageButtonText: 'Связаться с нами',
 
     },
     ENG: {
@@ -183,10 +195,10 @@ export const language = {
         homePageContactTitle: 'Contact us',
         homePageContactSubtitle: 'We are always happy to help you choose furniture',
         homePageContactContainerIcons: [
-            { src: '/telephone-icon.svg',  alt: 'telephone icon',  oneSubtitle: 'Telephone',  twoSubtitles: '+7 (495) 123-45-67'},
-            { src: '/facebook-icon.svg', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
-            { src: '/instagram-icon.svg', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
-            { src: '/location.svg', alt: 'location icon', oneSubtitle: 'Address', twoSubtitles: 'Moscow, st. Approximate, 123'}
+            { src: 'FiPhone',  alt: 'telephone icon',  oneSubtitle: 'Telephone',  twoSubtitles: '099-04-75-14'},
+            { src: 'RiFacebookBoxLine', alt: 'facebook icon',  oneSubtitle: 'Facebook',  twoSubtitles: 'info@nordhome.ru'},
+            { src: 'IoLogoInstagram', alt: 'instagram icon', oneSubtitle: 'Instagram', twoSubtitles: 'info@nordhome.ru'},
+            { src: 'LuMapPin', alt: 'location icon', oneSubtitle: 'Address', twoSubtitles: 'Echmiadzin city, Araratyan street, 27'}
         ],
         aboutHeaderTitle: 'Comfort created especially for you',
         aboutHeaderSubTitle: 'ABOUT US',
@@ -216,6 +228,12 @@ export const language = {
         aboutSectionInfoListSubTitle: 'Why Choose Us',
         aboutSectionInfoListTitle: 'A Partnership Built on Trust',
         aboutSectionInfoListText: 'When you choose us, you are not just buying furniture — you are investing in pieces that will become part of your family\'s story. Our commitment to excellence extends from the first consultation to years after delivery.',
+        contactHeaderTitle: 'Contact us',
+        contactHeaderSubTitle: 'We are always ready to help you with choosing furniture, repairing old furniture, and will be happy to answer all your questions',
+        contactPageIframeTitle: 'How to find us',
+        contactInfoTitle: 'Ready to discuss your project?',
+        contactInfoText: 'We\'re ready to help bring your ideas to life using premium materials and craftsmanship, and we also offer professional furniture repair',
+        contactPageButtonText: 'Contact us',
 
     }
 }

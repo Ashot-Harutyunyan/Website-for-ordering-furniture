@@ -1,0 +1,98 @@
+.contact-item-container {
+  scroll-margin-top: 200px;
+  width: 100%;
+  margin: clamp(1rem, 50%, 5rem) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 280px));
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 1rem;
+  .home-page-about-container-icons {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    background-color: var(--background-contact-item);
+    border: 1px solid color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
+    border-radius: calc(.75rem + 4px);;
+    padding: 2.5rem 1.5rem;
+    &:hover {
+      border-color: lab(71.2019% 8.24577 52.3464);
+    }
+    svg {
+      color: lab(71.2019% 8.24577 52.3464);
+    }
+    div {
+      max-width: 54px;
+      max-height: 54px;
+      margin: 0 auto;
+    }
+    span {
+      color: var(--link-color);
+    }
+  }
+}
+.contact-iframe-container {
+  padding: 2.5rem 1rem;
+  margin-block: 2.5rem;
+  background: var(--background-about-container);
+}
+.contact-iframe-container-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  h2 {
+    color: var(--title-color);
+    font-size: clamp(16px, 2vw, 26px);
+    padding-bottom: 1rem;
+  }
+  hr {
+    background: #C8A85E;
+    height: 2px;
+    border: none;
+    width: clamp(60px, 12vw, 100px);
+    margin: 0 auto;
+  }
+}
+.container-iframe {
+  max-width: 72rem;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.contact-info-container {
+  margin: clamp(1rem, 50%, 5rem) 0;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  h2, p {
+    text-align: center;
+  }
+  hr {
+    width: 50px;
+    background: #C8A85E;
+    height: 2px;
+    border: none;
+  }
+  p {
+    max-width: 950px;
+    color: var(--subTitle-color);
+    font-size: clamp(14px, 1.8vw, 20px);
+  }
+  h2 {
+    color: var(--title-color);
+    font-size: clamp(16px, 2.5vw, 60px);
+  }
+  button {
+    padding: .75rem 2.5rem;
+    border: none;
+    border-radius: calc(.75rem - 2px);
+    background: #C8A85E;
+    color: lab(3.01922% -.727452 -4.46609);
+    font-size: clamp(14px, 1.5vw, 18px);
+    cursor: pointer;
+  }
+}

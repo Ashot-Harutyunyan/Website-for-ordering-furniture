@@ -1,10 +1,9 @@
 import './about.style.scss'
-import React from 'react'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
 import AboutHeader from "../AboutHeader/AboutHeader.jsx"
 import InfoCard from "../InfoCard/InfoCard.jsx"
 import IconCard from "../IconCard/IconCard.jsx"
-import { IoCheckboxOutline } from "react-icons/io5";
+import { IoCheckboxOutline } from "react-icons/io5"
 
 function About() {
 

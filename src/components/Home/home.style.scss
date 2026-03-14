@@ -29,7 +29,7 @@
 }
 .home-information-about-us {
   position: relative;
-  background-color: var(--background-home-container);
+  background-color: var(--background-about-container);
   margin: 5rem 0;
   padding: 5rem 12px;
   display: flex;
@@ -97,7 +97,30 @@
     text-align: center;
   }
   .home-page-about-container {
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 280px));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    justify-content: center;
+    .home-page-about-container-icons {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+      border: 1px solid color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
+      padding: 1.5rem;
+      &:hover {
+        border-color: lab(71.2019% 8.24577 52.3464);
+      }
+      svg {
+        color: lab(71.2019% 8.24577 52.3464);
+      }
+      div {
+        max-width: 54px;
+        max-height: 54px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 @media (max-width: 950px) {

@@ -16,8 +16,19 @@
     z-index: 1;
   }
 }
+.about-header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(500px, 55vw, 1500px);
+  z-index: 1;
+  background-color: color-mix(in oklab, lab(3.01922% -.727452 -4.46609) 20%, transparent);
+}
 .about-header-title {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

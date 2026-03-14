@@ -2,8 +2,6 @@ import './homeSlider.style.scss'
 import { IMAGE } from "../../constants.js"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -17,7 +15,7 @@ function HomeSlider() {
         >
             {IMAGE.map(({ src, alt }, index) => (
                 <SwiperSlide key={index}>
-                    <LazyLoadImage src={src} alt={alt} effect="blur" />
+                    <img src={src} alt={alt} />
                 </SwiperSlide>
             ))}
         </Swiper>

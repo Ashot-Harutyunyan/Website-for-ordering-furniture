@@ -5,17 +5,18 @@
 }
 .dark {
   --bg-color: #111827;
-  --nav-bg: rgba(0, 0, 0, 0.32);
+  --nav-bg: color-mix(in oklab, lab(3.01922% -.727452 -4.46609) 80%, transparent);
   --link-color: #888888;
   --global-color: #F0F8FFFF;
   --subTitle-color: #9CA3AF;
   --title-color: #F3F3F3;
   --price-color: #C8A85E;
-  --background-home-container: #000000;
-  --background-home-icons: #C8A85E;
-  --bg-home-contact-icons: #9CA3AF;
+  --background-home-icons: color-mix(in oklab, lab(71.2019% 8.24577 52.3464) 10%, transparent);
+  --color-home-icons: lab(71.2019% 8.24577 52.3464);
+  --bg-home-contact-icons: color-mix(in oklab, lab(71.2019% 8.24577 52.3464) 10%, transparent);
   --background-about-container: lab(12.9615% -1.76476 -6.95769);
   --border-color-about-img: lab(71.2019% 8.24577 52.3464);
+  --background-contact-item: lab(5.23127% -1.15929 -6.2068);
 }
 .light {
   --bg-color: #F0F8FFFF;
@@ -25,11 +26,12 @@
   --subTitle-color: #4B5563;
   --title-color: #2D3748;
   --price-color: #a36000;
-  --background-home-container: #E5E7EB;
-  --background-home-icons: #DAB785;
-  --bg-home-contact-icons: #E5E7EB;
+  --background-home-icons: color-mix(in oklab, lab(71.2019% 8.24577 52.3464) 50%, transparent);
+  --color-home-icons: #2D3748;
+  --bg-home-contact-icons: color-mix(in oklab, lab(71.2019% 8.24577 52.3464) 10%, #0000000f);
   --background-about-container: lab(56 -3.46 -12.86 / 0.3);
   --border-color-about-img: lab(12.9615% -1.76476 -6.95769);
+  --background-contact-item: color-mix(in oklab, lab(1.55425% -0.288241 -1.34299) 50%, transparent);;
 }
 body {
   max-width: 3000px;
