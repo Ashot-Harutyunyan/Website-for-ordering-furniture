@@ -9,6 +9,7 @@ import Catalog from './components/Catalog/Catalog.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import SingleProduct from './components/SingleProduct/SingleProduct.jsx'
+import FiltersContext from "./ctx/FiltersContext.jsx"
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,6 @@ const router = createBrowserRouter([
                     { index: true,  element: <Home /> },
                     { path: '/product/:id',  element: <SingleProduct /> },
                     { path: '/catalog',  element: <Catalog /> },
-                    { path: '/catalog/:id',  element: <SingleProduct /> },
                     { path: '/about',  element: <About /> },
                     { path: '/contact',  element: <Contact /> },
                 // ]
@@ -35,7 +35,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
       <LanguageContext>
           <ThemeProvider>
-              <RouterProvider router={router}/>
+              <FiltersContext>
+                  <RouterProvider router={router}/>
+              </FiltersContext>
           </ThemeProvider>
       </LanguageContext>
   </StrictMode>,

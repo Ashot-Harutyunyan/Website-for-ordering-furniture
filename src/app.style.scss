@@ -17,6 +17,9 @@
   --background-about-container: lab(12.9615% -1.76476 -6.95769);
   --border-color-about-img: lab(71.2019% 8.24577 52.3464);
   --background-contact-item: lab(5.23127% -1.15929 -6.2068);
+  --product-item-background: lab(5.23127% -1.15929 -6.2068);
+  --background-filters-color: lab(5.23127% -1.15929 -6.2068);
+  --filters-border-bottom: color-mix(in oklab, lab(74.6925% 8.066 51.8524) 50%, transparent);
 }
 .light {
   --bg-color: #F0F8FFFF;
@@ -31,7 +34,10 @@
   --bg-home-contact-icons: color-mix(in oklab, lab(71.2019% 8.24577 52.3464) 10%, #0000000f);
   --background-about-container: lab(56 -3.46 -12.86 / 0.3);
   --border-color-about-img: lab(12.9615% -1.76476 -6.95769);
-  --background-contact-item: color-mix(in oklab, lab(1.55425% -0.288241 -1.34299) 50%, transparent);;
+  --background-contact-item: color-mix(in oklab, lab(1.55425% -0.288241 -1.34299) 50%, transparent);
+  --product-item-background: lab(5 -1.16 -6.21 / 0.12);
+  --background-filters-color: rgb(212, 219, 227);
+  --filters-border-bottom: color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
 }
 body {
   max-width: 3000px;

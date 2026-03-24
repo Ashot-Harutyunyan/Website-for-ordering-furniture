@@ -16,15 +16,15 @@ const getInitialLang = () => {
 }
 
 export default function LanguageContext({ children }) {
+
     const initial = getInitialLang()
+
     const [lang, setLang] = useState(initial.data)
     const [currentCode, setCurrentCode] = useState(initial.code)
 
     const handleLang = useCallback((newLang) => {
         if (!language[newLang]) return
-        try {
-            localStorage.setItem("language", newLang)
-        } catch {}
+        localStorage.setItem("language", newLang)
         setLang(language[newLang])
         setCurrentCode(newLang)
     }, [])

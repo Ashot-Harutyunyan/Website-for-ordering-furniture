@@ -1,24 +1,30 @@
 import './home.style.scss'
 import { useLanguage } from '../../ctx/LanguageContext.jsx'
 import { Link } from 'react-router'
-import HomeItem from "../HomeItem/HomeItem.jsx"
-import HomeSlider from "../HomeSlider/HomeSlider.jsx"
+import ProductCard from "../ProductCard/ProductCard.jsx"
 import IconCard from "../IconCard/IconCard.jsx"
 import InfoCard from "../InfoCard/InfoCard.jsx"
-import HomeHeader from "../HomeHeader/HomeHeader.jsx"
+import Header from "../Header/Header.jsx"
 import { HiMiniArrowLongRight } from "react-icons/hi2"
 
 
 function Home() {
 
     const [ lang ] = useLanguage()
+    const collection = lang.products.slice(0, -2)
 
     return (<>
-        <HomeHeader />
+        <Header
+            className={'home-header'}
+            title={lang.homeHeaderTitle}
+            subtitle={lang.homeHeaderSubTitle}
+            titleSpan={lang.homeHeaderTitleSpan}
+            reverse={false}
+        />
         <section className="home-featured-collection scrollUp">
             <h2 className="home-featured-collection-title">{lang.homeTitle}</h2>
             <p className="home-featured-collection-sub-title">{lang.homeSubTitle}</p>
-            <HomeItem array={lang.homeRecommendedCollection} />
+            <ProductCard products={collection} />
             <Link to='/catalog' className='link-catalog'>{lang.homeLinkCatalog}</Link>
         </section>
         <section className="home-information-about-us">
@@ -38,7 +44,17 @@ function Home() {
                     />
                 </div>
             </div>
-            <HomeSlider />
+            <div className="craftsman">
+                <div className="craftsman-image-wrapper">
+                    <div className="craftsman-image">
+                        <img
+                            src="/home-page-craftsman.png"
+                            alt="Master craftsman working on handmade furniture"
+                        />
+                    </div>
+                    <div className="craftsman-border" />
+                </div>
+            </div>
         </section>
         <section className='home-page-contact'>
             <div>

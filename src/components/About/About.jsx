@@ -1,6 +1,6 @@
 import './about.style.scss'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
-import AboutHeader from "../AboutHeader/AboutHeader.jsx"
+import Header from "../Header/Header.jsx"
 import InfoCard from "../InfoCard/InfoCard.jsx"
 import IconCard from "../IconCard/IconCard.jsx"
 import { IoCheckboxOutline } from "react-icons/io5"
@@ -10,7 +10,12 @@ function About() {
     const [ lang ] = useLanguage()
 
     return (<>
-        <AboutHeader />
+        <Header
+            className={'about-header'}
+            title={lang.aboutHeaderTitle}
+            subtitle={lang.aboutHeaderSubTitle}
+            reverse={true}
+        />
         <section className='about-page-container-information-img'>
             <div>
                 <h2 className='container-information-img-title'>{lang.aboutSectionInfoTitle}</h2>

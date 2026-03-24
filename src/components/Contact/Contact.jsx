@@ -1,6 +1,6 @@
 import './contact.style.scss'
 import { useRef } from 'react'
-import ContactHeader from "../ContactHeader/ContactHeader.jsx"
+import Header from "../Header/Header.jsx"
 import IconCard from "../IconCard/IconCard.jsx"
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
 
@@ -16,7 +16,12 @@ function Contact() {
     }
 
     return (<>
-        <ContactHeader />
+        <Header
+            className={'contact-header'}
+            title={lang.contactHeaderTitle}
+            subtitle={lang.contactHeaderSubTitle}
+            reverse={false}
+        />
         <section ref={contactRef} className='contact-item-container'>
             <IconCard
                 array={lang.homePageContactContainerIcons}
