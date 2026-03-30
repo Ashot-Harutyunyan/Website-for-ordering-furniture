@@ -77,11 +77,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  img {
+  .lazy-load-image-background.blur.lazy-load-image-loaded > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .8s ease;
+    transition: .3s ease;
   }
   &:hover img {
     transform: scale(1.2);

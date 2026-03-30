@@ -1,0 +1,65 @@
+.single-product-container-info-loading {
+  max-width: clamp(280px, 50vw, 580px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30px 50px 5px repeat(3, 20px) 5px repeat(4, 50px);
+  gap: 16px;
+  .component-loading {
+    height: 20px;
+    width: 100%;
+  }
+  .component-loading:nth-child(1) {
+    height: 30px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .component-loading:nth-child(2) {
+    height: 50px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .component-loading:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .component-loading:nth-child(4) {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  .component-loading:nth-child(5) {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .component-loading:nth-child(6) {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+  .component-loading:nth-child(7) {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .component-loading:nth-child(8) {
+    grid-column: 3/4;
+    grid-row: 6/7;
+ }
+  .component-loading:nth-child(9),
+  .component-loading:nth-child(10),
+  .component-loading:nth-child(11),
+  .component-loading:nth-child(12) {
+    grid-column: 1/4;
+    height: 50px;
+  }
+  .component-loading:nth-child(9) {
+    grid-row: 8/9;
+  }
+  .component-loading:nth-child(10) {
+    grid-row: 9/10;
+  }
+  .component-loading:nth-child(11) {
+    grid-row: 10/11;
+  }
+  .component-loading:nth-child(12) {
+    grid-row: 11/12;
+  }
+}

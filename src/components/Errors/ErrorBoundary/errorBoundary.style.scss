@@ -1,0 +1,49 @@
+.container-error-boundary {
+  min-height: 725px;
+  height: calc(100vh - 225px);
+  padding: 80px 0;
+}
+.error-boundary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  .lazy-load-image-loaded {
+    width: clamp(300px, 50%, 400px);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  h1, p {
+    color: #DC143CFF;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  a {
+    margin-top: 24px;
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: 1px solid var(--title-color);
+    background: transparent;
+    color: var(--title-color);
+    box-shadow: 0 0 4px .1px var(--title-color);
+    transition: all 0.3s ease;
+    &:hover {
+      background: var(--title-color);
+      color: var(--bg-color);
+    }
+  }
+}
+@media (max-width: 1046px) {
+  .container-error-boundary {
+    height: calc(100vh - 303px);
+  }
+}
+@media (max-width: 760px) {
+  .container-error-boundary {
+    height: calc(100vh - 361px);
+  }
+}

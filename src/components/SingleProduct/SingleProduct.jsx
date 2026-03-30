@@ -1,34 +1,38 @@
 import './singleProduct.style.scss'
-import { useMemo } from 'react'
-import { Link, useParams } from "react-router"
+import { useParams } from "react-router"
+import useSingleProductQuery from './useSingleProductQuery.js'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
 import SingleProductSlider from "../SingleProductSlider/SingleProductSlider"
 import SingleProductInfo from "../SingleProductInfo/SingleProductInfo"
+import { useLoadingArray } from "../hooks/useLoadingArray.js"
+import { NUMBERS } from "../../constants.js"
 import IconCard from "../IconCard/IconCard.jsx"
+import SingleProductInfoLoading from "../Loading/SingleProductInfoLoading/SingleProductInfoLoading.jsx"
+import RecommendedFurniture from "../RecommendedFurniture/RecommendedFurniture.jsx"
+import QueryError from "../Errors/QueryError/QueryError.jsx"
 
 function SingleProduct() {
 
     const { id } = useParams()
-    const [ lang ] = useLanguage()
-    const { color, description, image, material, name, price } = lang.products[id - 1]
-    const data = lang.products
+    const [ lang, currentCode ] = useLanguage()
 
-
-    const randomProducts = useMemo(() => {
-        const used = new Set([id - 1])
-
-        return Array.from({ length: 3 }, () => {
-            let i
-            do { i = Math.floor(Math.random() * data.length) } while (used.has(i))
-            used.add(i)
-            return data[i]
-        })
-    }, [data, id])
+    const { data, isLoading, error } = useSingleProductQuery(currentCode, id)
+    const loadingArray = useLoadingArray(NUMBERS.quantityOfSingleProductsInTheLoadingArray)
+    const loadingArrayRecommendedFurniture = useLoadingArray(NUMBERS.numberOfRandomFurnitureOffers)
 
     return (<>
         <section className="single-product-slider-Info">
-            <SingleProductSlider image={image} alt={name} />
-            <SingleProductInfo {...{ color, description, material, name, price }} />
+            {isLoading
+                ? <>
+                    <SingleProductSlider image={loadingArray}/>
+                    <SingleProductInfoLoading />
+                  </>
+                : error ? <QueryError message={error.message} />
+                : <>
+                    <SingleProductSlider image={data.separateFurniture.image} alt={data.separateFurniture.name} />
+                    <SingleProductInfo {...data.separateFurniture} />
+                  </>
+            }
         </section>
         <section className="single-product-cards">
             <h2>
@@ -48,17 +52,11 @@ function SingleProduct() {
             </div>
         </section>
         <section className='single-product-container-cards-link'>
-            {randomProducts.map(({id, image, name, price}) => (
-                <Link to={`/product/${id}`} key={id} className='single-product-card-link'>
-                    <div className='single-product-card-link-container-img'>
-                        <img src={image[0]} alt={name}/>
-                    </div>
-                    <div className='single-product-card-link-container-name-price'>
-                        <p>{name}</p>
-                        <p>{price} &#1423;</p>
-                    </div>
-                </Link>
-            ))}
+            {isLoading
+                ? <RecommendedFurniture array={loadingArrayRecommendedFurniture} />
+                : error ? <QueryError message={error.message} />
+                : <RecommendedFurniture array={data.offerFurniture} />
+            }
         </section>
     </>)
 }

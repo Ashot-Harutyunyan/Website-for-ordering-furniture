@@ -1,6 +1,3 @@
-import SingleProduct from "./components/SingleProduct/SingleProduct.jsx";
-import IconCard from "./components/IconCard/IconCard.jsx";
-
 export const language = {
     ARM: {
         NAV_LINKS: [
@@ -14,16 +11,6 @@ export const language = {
         homeHeaderSubTitle: 'Բազմոցներ, բազկաթոռներ և հավաքածուներ՝ հարմարավետ, ժամանակակից, բարձրորակ',
         homeTitle: 'Առաջարկվող Հավաքածու',
         homeSubTitle: 'Բացահայտեք մեր ամենացանկալի իրերը, որոնցից յուրաքանչյուրը պատմում է բացառիկ վարպետության և անժամանակյա դիզայնի մասին։',
-        products: [
-            { id: "1", name: "Զմրուխտյա թավշյա բազմոց", description: "Շքեղ զմրուխտ կանաչ թավշյա բազմոց՝ էլեգանտ կորերով և ոսկեգույն մետաղական ոտքերով։", price: "1.237.000", image: ["/images/sofa-emerald-1.png", "/images/sofa-emerald-2.png", "/images/sofa-emerald-3.png", "/images/sofa-emerald-4.png"], category: "sofas", material: ["թավիշ", "մետաղ"], color: "զմրուխտ" },
-            { id: "2", name: "Կոնյակագույն կաշվե բազկաթոռ", description: "Միջին դարի ոճի կաշվե բազկաթոռ՝ կոնյակագույն երանգով և բարձրորակ փայտե ոտքերով։", price: "694.000", image: ["/images/armchair-leather-1.png", "/images/armchair-leather-2.png", "/images/armchair-leather-3.png", "/images/armchair-leather-4.png"], category: "armchairs", material: ["կաշի", "փայտ"], color: "շագանակագույն" },
-            { id: "3", name: "Մուգ կապույտ թավշյա մահճակալ", description: "Շքեղ թավշյա մահճակալի շրջանակ՝ մուգ կապույտ գույնով, կոճկված գլխամասով և ոսկեգույն դետալներով։", price: "1.725.000", image: ["/images/bed-navy-1.png", "/images/bed-navy-2.png"], category: "beds", material: ["թավիշ", "մետաղ"], color: "մուգ կապույտ" },
-            { id: "4", name: "Ընկուզենու փայտից պահարան", description: "Ժամանակակից պահարան մուգ ընկուզենու փայտից՝ էլեգանտ պղնձագույն բռնակներով։", price: "1.013.000", image: ["/images/cabinet-walnut-1.png", "/images/cabinet-walnut-2.png", "/images/cabinet-walnut-3.png"], category: "cabinets", material: ["փայտ", "մետաղ"], color: "շագանակագույն" },
-            { id: "5", name: "Վարդագույն թավշյա նստարան", description: "Պրեմիում թավշյա նստարան՝ մեղմ վարդագույն երանգով և ոսկեգույն մետաղական ոտքերով։", price: "338.000", image: ["/images/bench-velvet-1.png", "/images/bench-velvet-2.png"], category: "benches", material: ["թավիշ", "մետաղ"], color: "վարդագույն" },
-            { id: "6", name: "Ժամանակակից պահեստավորման դարակ", description: "Շքեղ ժամանակակից գրադարակ՝ սև մետաղից և փայտից՝ էլեգանտ արդյունաբերական դիզայնով։", price: "600.000", image: ["/images/storage-shelf-1.png", "/images/storage-shelf-2.png"], category: "storage", material: ["մետաղ", "փայտ"], color: "մոխրագույն" },
-            { id: "7", name: "Մուգ մոխրագույն անկյունային բազմոց", description: "Ժամանակակից L-աձև բազմոց՝ մոխրագույն գործվածքից՝ մաքուր և պարզ գծերով։", price: "1.837.000", image: ["/images/sofa-sectional-1.png", "/images/sofa-sectional-2.png", "/images/sofa-sectional-3.png"], category: "sofas", material: ["գործվածք"], color: "մոխրագույն" },
-            { id: "8", name: "Բորդո թավշյա բազկաթոռ", description: "Շքեղ բազկաթոռ խոր բորդո թավշից՝ կոր մեջքով և ոսկեգույն շրջանակով։", price: "487.000", image: ["/images/armchair-velvet-1.png", "/images/armchair-velvet-2.png", "/images/armchair-velvet-3.png"], category: "armchairs", material: ["թավիշ", "մետաղ"], color: "բորդո" }
-        ],
         productsColor: 'գույն',
         productsMaterial: 'նյութ',
         productsPrice: 'գին',
@@ -133,6 +120,10 @@ export const language = {
             'Յուրաքանչյուր մանրուք մանրակրկիտ կերպով մտածված է՝ սկսած բարձրորակ գործվածքների և ամուր փայտե կառուցվածքների ընտրությունից մինչև վերջնական հպումները, որոնք ներդաշնակություն և նրբագեղություն են հաղորդում: Արդյունքը կահույք է, որը ոչ միայն բարելավում է ձեր ինտերիերը, այլև բարելավում է ձեր կյանքի ընդհանուր որակը:',
             'Նոր կահույք ստեղծելուց բացի, մենք մասնագիտանում ենք վերականգնման և վերանորոգման մեջ: Մեր վարպետները կյանքի են կոչում մաշված և մաշված կտորները՝ պահպանելով դրանց բնավորությունը և վերականգնելով դրանց ամրությունն ու տեսքը: Մանրակրկիտ վերականգնման միջոցով ձեր կահույքը վերականգնում է իր գեղեցկությունը և շարունակում է ծառայել ձեզ տարիներ շարունակ:'
         ],
+        errorLinkText: 'Վերադառնալ Գլխավոր Էջ',
+        errorBoundaryTitle: 'Ինչ-որ բան սխալ է տեղի ունեցել',
+        errorBoundaryMessage: 'Անհայտ սխալ',
+        queryErrorTitle: 'Սխալ Առաջացավ Ապրանքների Բեռնման Ժամանակ',
 
     },
     RUS: {
@@ -147,16 +138,6 @@ export const language = {
         homeHeaderSubTitle: 'Диваны, кресла и комплекты, удобные, современные, высокого качества',
         homeTitle: 'Рекомендуемая Коллекция',
         homeSubTitle: 'Откройте для себя наши самые желанные изделия, каждое из которых рассказывает историю исключительного мастерства и вневременного дизайна.',
-        products: [
-            { id: "1", name: "Изумрудный бархатный диван", description: "Роскошный диван из изумрудного бархата с элегантными изгибами и золотыми металлическими ножками.", price: "1.237.000", image: ["/images/sofa-emerald-1.png", "/images/sofa-emerald-2.png", "/images/sofa-emerald-3.png", "/images/sofa-emerald-4.png"], category: "sofas", material: ["бархат", "металл"], color: "изумрудный" },
-            { id: "2", name: "Кожаное кресло коньячного цвета", description: "Кресло в стиле mid-century из кожи коньячного цвета с высококачественными деревянными ножками.", price: "694.000", image: ["/images/armchair-leather-1.png", "/images/armchair-leather-2.png", "/images/armchair-leather-3.png", "/images/armchair-leather-4.png"], category: "armchairs", material: ["кожа", "дерево"], color: "коричневый" },
-            { id: "3", name: "Тёмно-синяя бархатная кровать", description: "Роскошная кровать из бархата тёмно-синего цвета с стёганым изголовьем и золотыми деталями.", price: "1.725.000", image: ["/images/bed-navy-1.png", "/images/bed-navy-2.png"], category: "beds", material: ["бархат", "металл"], color: "тёмно-синий" },
-            { id: "4", name: "Шкаф из орехового дерева", description: "Современный шкаф из тёмного орехового дерева с элегантными медными ручками.", price: "1.013.000", image: ["/images/cabinet-walnut-1.png", "/images/cabinet-walnut-2.png", "/images/cabinet-walnut-3.png"], category: "cabinets", material: ["дерево", "металл"], color: "коричневый" },
-            { id: "5", name: "Розовая бархатная скамья", description: "Премиальная скамья из мягкого розового бархата с золотыми металлическими ножками.", price: "338.000", image: ["/images/bench-velvet-1.png", "/images/bench-velvet-2.png"], category: "benches", material: ["бархат", "металл"], color: "розовый" },
-            { id: "6", name: "Современный стеллаж для хранения", description: "Стильный современный стеллаж из чёрного металла и дерева с элегантным индустриальным дизайном.", price: "600.000", image: ["/images/storage-shelf-1.png", "/images/storage-shelf-2.png"], category: "storage", material: ["металл", "дерево"], color: "серый" },
-            { id: "7", name: "Тёмно-серый угловой диван", description: "Современный L-образный диван из серой ткани с чистыми и минималистичными линиями.", price: "1.837.000", image: ["/images/sofa-sectional-1.png", "/images/sofa-sectional-2.png", "/images/sofa-sectional-3.png"], category: "sofas", material: ["ткань"], color: "серый" },
-            { id: "8", name: "Бордовый бархатный кресло", description: "Роскошное кресло из глубокого бордового бархата с изогнутой спинкой и золотым каркасом.", price: "487.000", image: ["/images/armchair-velvet-1.png", "/images/armchair-velvet-2.png", "/images/armchair-velvet-3.png"], category: "armchairs", material: ["бархат", "металл"], color: "бордовый" }
-        ],
         productsColor: 'цвет',
         productsMaterial: 'материал',
         productsPrice: 'цена',
@@ -266,6 +247,10 @@ export const language = {
             'Каждая деталь тщательно продумана, от выбора высококачественных тканей и массивных деревянных конструкций до отделочных штрихов, которые придают гармонию и изысканность. В результате получается мебель, которая не только украшает ваш интерьер, но и повышает качество вашей жизни в целом.',
             'Помимо создания новых предметов мебели, мы специализируемся на реставрации и ремонте. Наши мастера возвращают к жизни изношенные и состаренные вещи, сохраняя их характер, восстанавливая прочность и внешний вид. Благодаря тщательной реставрации ваша мебель вновь обретает свою красоту и продолжает служить вам долгие годы. '
         ],
+        errorLinkText: 'Вернуться На Главную',
+        errorBoundaryTitle: 'Что-то пошло не так',
+        errorBoundaryMessage: 'Неизвестная ошибка',
+        queryErrorTitle: 'Ошибка Загрузки Товаров',
 
     },
     ENG: {
@@ -280,16 +265,6 @@ export const language = {
         homeHeaderSubTitle: 'Sofas, armchairs and sets: comfortable, modern, high quality',
         homeTitle: 'Featured Collection',
         homeSubTitle: 'Discover our most coveted pieces, each telling a story of exceptional craftsmanship and timeless design.',
-        products: [
-            { id: "1", name: "Emerald Velvet Sofa", description: "Luxurious emerald green velvet sofa with elegant curves and golden metal legs.", price: "1.237.000", image: ["/images/sofa-emerald-1.png", "/images/sofa-emerald-2.png", "/images/sofa-emerald-3.png", "/images/sofa-emerald-4.png"], category: "sofas", material: ["velvet", "metal"], color: "emerald" },
-            { id: "2", name: "Cognac Leather Armchair", description: "Mid-century style leather armchair in cognac color with high-quality wooden legs.", price: "694.000", image: ["/images/armchair-leather-1.png", "/images/armchair-leather-2.png", "/images/armchair-leather-3.png", "/images/armchair-leather-4.png"], category: "armchairs", material: ["leather", "wood"], color: "brown" },
-            { id: "3", name: "Dark Blue Velvet Bed", description: "Luxurious velvet bed frame in dark blue with a tufted headboard and golden details.", price: "1.725.000", image: ["/images/bed-navy-1.png", "/images/bed-navy-2.png"], category: "beds", material: ["velvet", "metal"], color: "dark blue" },
-            { id: "4", name: "Walnut Wood Cabinet", description: "Modern cabinet made of dark walnut wood with elegant copper handles.", price: "1.013.000", image: ["/images/cabinet-walnut-1.png", "/images/cabinet-walnut-2.png", "/images/cabinet-walnut-3.png"], category: "cabinets", material: ["wood", "metal"], color: "brown" },
-            { id: "5", name: "Pink Velvet Bench", description: "Premium velvet bench in soft pink with golden metal legs.", price: "338.000", image: ["/images/bench-velvet-1.png", "/images/bench-velvet-2.png"], category: "benches", material: ["velvet", "metal"], color: "pink" },
-            { id: "6", name: "Modern Storage Shelf", description: "Stylish modern shelf made of black metal and wood with an elegant industrial design.", price: "600.000", image: ["/images/storage-shelf-1.png", "/images/storage-shelf-2.png"], category: "storage", material: ["metal", "wood"], color: "gray" },
-            { id: "7", name: "Dark Gray Sectional Sofa", description: "Modern L-shaped sofa made of gray fabric with clean and minimalist lines.", price: "1.837.000", image: ["/images/sofa-sectional-1.png", "/images/sofa-sectional-2.png", "/images/sofa-sectional-3.png"], category: "sofas", material: ["fabric"], color: "gray" },
-            { id: "8", name: "Burgundy Velvet Armchair", description: "Luxurious armchair made of deep burgundy velvet with a curved back and golden frame.", price: "487.000", image: ["/images/armchair-velvet-1.png", "/images/armchair-velvet-2.png", "/images/armchair-velvet-3.png"], category: "armchairs", material: ["velvet", "metal"], color: "burgundy" }
-        ],
         productsColor: 'color',
         productsMaterial: 'material',
         productsPrice: 'price',
@@ -399,6 +374,10 @@ export const language = {
             'Every detail is carefully considered, from the selection of high-quality fabrics and solid wood structures to the finishing touches that bring harmony and sophistication. The result is furniture that not only enhances your interior but elevates your entire living experience.',
             'In addition to creating new pieces, we specialize in the restoration and repair of furniture. Our artisans bring worn and aged items back to life, preserving their character while renewing their strength and appearance. Through careful restoration, your furniture regains its beauty and continues to serve you for years to come.'
         ],
+        errorLinkText: 'Back To Home',
+        errorBoundaryTitle: 'Something went wrong',
+        errorBoundaryMessage: 'Unknown error',
+        queryErrorTitle: 'Error Loading Products',
 
     }
 }

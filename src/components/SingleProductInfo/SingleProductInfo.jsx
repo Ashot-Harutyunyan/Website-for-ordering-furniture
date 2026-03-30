@@ -1,10 +1,10 @@
 import './singleProductInfo.style.scss'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
-import { Link } from "react-router"
 import { LuMapPin } from "react-icons/lu"
 import { FiPhone } from "react-icons/fi"
 import { RiFacebookBoxLine } from "react-icons/ri"
 import { IoLogoInstagram } from "react-icons/io5"
+import ComponentLoading from "../Loading/ComponentLoading/ComponentLoading.jsx";
 
 const icons = {
     FiPhone,

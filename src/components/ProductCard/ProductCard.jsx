@@ -1,6 +1,8 @@
 import './productCard.style.scss'
 import { Link } from 'react-router'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function ProductCard({ products }) {
 
@@ -10,7 +12,7 @@ function ProductCard({ products }) {
             {products.map(({ id, image, name, price, description }, index) => {
                 return <div key={index} className="container-item">
                     <div className="container-image">
-                        <img src={image[0]} alt={name}/>
+                        <LazyLoadImage src={image[0]} alt={name} effect="blur" />
                     </div>
                     <div className='container-collection-item-info'>
                         <p className='container-product-card-name'>{name}</p>

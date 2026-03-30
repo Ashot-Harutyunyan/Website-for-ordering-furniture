@@ -3,6 +3,8 @@ import { useLanguage } from "../../ctx/LanguageContext.jsx"
 import Header from "../Header/Header.jsx"
 import InfoCard from "../InfoCard/InfoCard.jsx"
 import IconCard from "../IconCard/IconCard.jsx"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { IoCheckboxOutline } from "react-icons/io5"
 
 function About() {
@@ -23,7 +25,7 @@ function About() {
                     <InfoCard array={lang.aboutSectionInfoText} />
                 </div>
             </div>
-            <img className='img-craftsman' src="/craftsman.png" alt="craftsman" />
+            <LazyLoadImage className='img-craftsman' src="/craftsman.png" alt="craftsman" effect="blur" />
         </section>
         <section className='about-container-info-items'>
             <p className='about-container-info-items-small-title'>{lang.aboutSectionInfoItemsSmallTitle}</p>

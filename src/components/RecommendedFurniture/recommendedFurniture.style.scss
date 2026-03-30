@@ -1,0 +1,81 @@
+.single-product-container-cards-link {
+  margin: 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-template-rows: auto;
+  justify-content: center;
+  gap: 1rem;
+}
+.single-product-card-link {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  background-color: var(--product-item-background);
+  border: 1px solid color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
+  border-radius: 5px;
+  .single-product-card-link-container-name-price {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .single-product-card-link-container-name-price {
+    padding: 1rem .5rem 1.5rem 1.5rem;
+    p:nth-child(1) {
+      color: var(--subTitle-color);
+    }
+    p:nth-child(2) {
+      color: lab(71.2019% 8.24577 52.3464);
+    }
+  }
+  .single-product-card-link-container-img {
+    width: 100%;
+    max-height: 300px;
+    height: max-content;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+  }
+  .lazy-load-image-background.blur.lazy-load-image-loaded > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 30px rgba(196, 164, 106, 0.15);
+    border-color: color-mix(in oklab, lab(74.6925% 8.066 51.8524) 50%, transparent);
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+.recommended-furniture-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--product-loading-container-bg-color);
+  border: 1px solid color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
+  &:hover {
+    box-shadow: 0 0 30px rgba(196, 164, 106, 0.15);
+    border-color: color-mix(in oklab, lab(74.6925% 8.066 51.8524) 50%, transparent);
+  }
+  .component-loading:first-child {
+    width: 100%;
+    height: 300px;
+  }
+  .container-recommended-furniture-loading-element {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 15px;
+    .component-loading:nth-child(1) {
+      width: 60%;
+      height: 20px;
+    }
+    .component-loading:nth-child(2) {
+      width: 80%;
+      height: 50px;
+    }
+  }
+}

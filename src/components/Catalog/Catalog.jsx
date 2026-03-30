@@ -1,30 +1,41 @@
 import './catalog.style.scss'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
+import useCatalogQuery from "../Contact/useCatalogQuery.js"
+import { NUMBERS } from '../../constants.js'
 import Header from "../Header/Header.jsx"
 import { Link } from 'react-router'
 import { useLanguage } from "../../ctx/LanguageContext.jsx"
 import { useFilters } from "../../ctx/FiltersContext.jsx"
 import Filters from "../Filters/Filters.jsx"
 import ProductCard from "../ProductCard/ProductCard.jsx"
+import ProductLoading from "../Loading/ProductLoading/ProductLoading.jsx"
+import {useLoadingArray} from "../hooks/useLoadingArray.js"
 import { HiMiniArrowLongRight } from "react-icons/hi2"
+import QueryError from "../Errors/QueryError/QueryError.jsx"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function Catalog() {
 
-    const [ lang ] = useLanguage()
+    const [ lang, currentCode ] = useLanguage()
     const [ category ] = useFilters()
 
-    const [lastProductsIndex, setLastProductsIndex] = useState(9)
-    const currentProducts = lang.products.slice(0, lastProductsIndex)
+    const [lastProductsIndex, setLastProductsIndex] = useState(NUMBERS.productsPerPage)
 
-    function handleFiltersProducts(category) {
-        const products = currentProducts
-        if(category === 'all') return products
-        return products.filter((elem) => elem.category === category)
-    }
+    const { data, isLoading, error } = useCatalogQuery(currentCode)
+    const loadingArray = useLoadingArray(NUMBERS.quantityOfProductsInTheLoadingArray)
 
-    function handleLoadMoreProducts(length) {
-        if(lastProductsIndex >= length) return
-        setLastProductsIndex((prev) => prev * 2)
+    const filteredProducts = useMemo(() => {
+        if (!data) return []
+        const filtered = category === 'all'
+            ? data
+            : data.filter(p => p.category === category)
+        return filtered.slice(0, lastProductsIndex)
+    }, [data, category, lastProductsIndex])
+
+    function handleLoadMoreProducts() {
+        if (!data || lastProductsIndex >= data.length) return
+        setLastProductsIndex(prev => prev + NUMBERS.productsPerPage)
     }
 
     return (<>
@@ -38,10 +49,13 @@ function Catalog() {
             <h2 className='catalog-categories-title'>{lang.catalogCategoriesTitle}</h2>
             <p className='catalog-categories-subTitle'>{lang.catalogCategoriesSubTitle}</p>
             <Filters />
-            <ProductCard products={handleFiltersProducts(category)} />
-            {lastProductsIndex <= lang.products.length &&
-                <button className='button-load-more-products'
-                    onClick={()=> handleLoadMoreProducts(lang.products.length)}>
+            {
+                isLoading ? <ProductLoading array={loadingArray} />
+                : error ? <QueryError message={error.message} />
+                : <ProductCard products={filteredProducts} />
+            }
+            {data && lastProductsIndex < data.length &&
+                <button className='button-load-more-products' onClick={()=> handleLoadMoreProducts()}>
                     {lang.buttonLoadMore}
                 </button>
             }
@@ -55,7 +69,7 @@ function Catalog() {
             {lang.catalogIndicativeGoods.map(({ id, name, description, src}) => (
                 <div key={id} className="catalog-indicative-goods">
                     <div className='catalog-indicative-goods-container-img'>
-                        <img src={src} alt={name}/>
+                        <LazyLoadImage src={src} alt={name} effect="blur" />
                     </div>
                     <div className='catalog-indicative-goods-container-info'>
                         <h3>{name}</h3>

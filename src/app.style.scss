@@ -20,6 +20,9 @@
   --product-item-background: lab(5.23127% -1.15929 -6.2068);
   --background-filters-color: lab(5.23127% -1.15929 -6.2068);
   --filters-border-bottom: color-mix(in oklab, lab(74.6925% 8.066 51.8524) 50%, transparent);
+  --product-loading-container-bg-color: lab(5.2% -1.1 -6.2);
+  --product-loading-container-bg-image:  linear-gradient(110deg, lab(5.2% -1.1 -6.2) 10%, lab(12% -1 -6) 50%, lab(5.2% -1.1 -6.2) 60%);
+  --product-loading-element-color: #0c0c0c;
 }
 .light {
   --bg-color: #F0F8FFFF;
@@ -38,6 +41,9 @@
   --product-item-background: lab(5 -1.16 -6.21 / 0.12);
   --background-filters-color: rgb(212, 219, 227);
   --filters-border-bottom: color-mix(in oklab, lab(18.7658% -1.84783 -6.98735) 50%, transparent);
+  --product-loading-container-bg-color: #e5e5e5;
+  --product-loading-container-bg-image: linear-gradient(110deg, #e5e5e5 25%, #ffffff 50%, #e5e5e5 75%);
+  --product-loading-element-color: #a7a5a5;;
 }
 body {
   max-width: 3000px;
