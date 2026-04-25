@@ -14,8 +14,6 @@ Website for Ordering Furniture is a modern furniture ordering website developed 
  - Fast image loading and optimization
  - Hosting on Vercel
 
-##
-
 ## Technologies
 
  - React 19
@@ -25,8 +23,6 @@ Website for Ordering Furniture is a modern furniture ordering website developed 
  - Sass (SCSS)
  - React Icons
  - Lazy Load Images
-
-##
 
 ## Key Features
 
