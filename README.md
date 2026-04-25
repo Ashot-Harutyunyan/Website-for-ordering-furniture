@@ -4,7 +4,9 @@
 
 Website for Ordering Furniture is a modern furniture ordering website developed using React.js.
 
-## The project supports:
+---
+
+## The project supports
 
  - Multilingual (Հայերեն / English / Russian)
  - Light and dark themes
@@ -12,7 +14,7 @@ Website for Ordering Furniture is a modern furniture ordering website developed 
  - Fast image loading and optimization
  - Hosting on Vercel
 
----
+##
 
 ## Technologies
 
@@ -24,7 +26,7 @@ Website for Ordering Furniture is a modern furniture ordering website developed 
  - React Icons
  - Lazy Load Images
 
----
+##
 
 ## Key Features
 
